@@ -1,0 +1,130 @@
+<style>
+
+    .slidecontainer {
+    width: 100%;
+    }
+
+    /* El deslizador propiamente dicho */
+    .slider {
+    -webkit-appearance: none;  /* Anula los estilos CSS por defecto */
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none; /* Eliminar el contorno */
+    opacity: 0.7; /* Establecer la transparencia (para efectos de mouse-over en hover) */
+    -webkit-transition: .2s; /* Transición de 0,2 segundos al pasar el ratón por encima */
+    transition: opacity .2s;
+    }
+
+    /* Efectos de desplazamiento del ratón */
+    .slider:hover {
+    opacity: 1; /* Se muestra completamente al pasar el ratón por encima */
+    }
+
+    /* El mango del deslizador (utilice -webkit- (Chrome, Opera, Safari, Edge) y -moz- (Firefox) para anular el aspecto predeterminado) */
+    .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Anular el aspecto por defecto */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: blueviolet;
+    cursor: pointer; /* Cursor al pasar el ratón por encima */
+    }
+
+    .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: brown;
+    cursor: pointer;
+    }
+
+    nav ul{height:200px; width:18%;}
+    nav ul{overflow:hidden; overflow-y:scroll;}
+
+    </style>
+    </head>
+    <body>
+
+    <h1>Round Range Slider</h1>
+
+    <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <p>Value: <span id="demo"></span></p>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <h1><li>Link 1</li></h1>
+                <h1><li>Link 2</li></h1>
+                <h1><li>Link 3</li></h1>
+                <h1><li>Link 4</li></h1>
+                <h1><li>Link 5</li></h1>
+                <h1><li>Link 6</li></h1>
+                <h1><li>Link 7</li></h1>
+                <h1><li>Link 8</li></h1>
+                <h1><li>Link 9</li></h1>
+                <h1><li>Link 10</li></h1>
+                <h1><li>Link 11</li></h1>
+                <h1><li>Link 12</li></h1>
+                <h1><li>Link 13</li></h1>
+                <h1><li>Link 14</li></h1>
+                <h1><li>Link 15</li></h1>
+                <h1><li>Link 16</li></h1>
+                <h1><li>Link 17</li></h1>
+                <h1><li>Link 18</li></h1>
+                <h1><li>Link 19</li></h1>
+                <h1><li>Link 18</li></h1>
+                <h1><li>Link 17</li></h1>
+                <h1><li>Link 16</li></h1>
+                <h1><li>Link 15</li></h1>
+                <h1><li>Link 14</li></h1>
+                <h1><li>Link 13</li></h1>
+                <h1><li>Link 12</li></h1>
+                <h1><li>Link 11</li></h1>
+                <h1><li>Link 10</li></h1>
+                <h1><li>Link 1</li></h1>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div id="Layer1" style="width:100px; height:115px; overflow:hidden; overflow-y:scroll;">Aquí saldrá un scroll<br>
+        <br>
+        sólo<br>
+        dale<br>
+        interlineados<br>
+        simple<br>
+        no ?
+        </div>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+const slider = document.getElementById("myRange");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
